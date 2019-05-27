@@ -2,7 +2,6 @@ import { SHOW_ITEM } from './types';
 import request from 'superagent';
 
 export const showItem = (id) => dispatch => {
-    // const APIItem = `https://mfwkweb-api.clarovideo.net/services/content/data?device_id=web&device_category=web&device_model=web&device_type=web&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.86&region=mexico&HKS=m9kpsvofksdglsl494resh4h16&group_id=${this.props.match.params.id}`
     const APIItem = 'https://mfwkweb-api.clarovideo.net/services/content/data?device_id=web&device_category=web&device_model=web&device_type=web&format=json&device_manufacturer=generic&authpn=webclient&authpt=tfg1h3j4k6fd7&api_version=v5.86&region=mexico&HKS=m9kpsvofksdglsl494resh4h16&group_id='+id;
     request
     .get(APIItem)

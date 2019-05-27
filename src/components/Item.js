@@ -10,15 +10,10 @@ class Item extends Component {
         this.props.showItem(this.props.match.params.id);
     }
 
+
     render() {
-        // console.log(this.props);
-        // const { genres, backgroundImage } = this.props;
-        // let date = this.props.date;
-        // console.log(date);
-        // console.log(genres)
         return (
             <>
-                {/* <div style={{backgroundImage: `url(${this.props.backgroundImage})`}} className="cardItem"> */}
                 <div style={{backgroundImage: `url(${this.props.backgroundImage})`}} className="cardItem">
                     <h3 className="cardItem__title">{ this.props.title }</h3>
                     <div className="cardItem__content__container">

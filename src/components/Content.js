@@ -11,18 +11,8 @@ class Content extends Component {
         this.props.showContent();
     }
 
-    searchingItem = (e) => {
-        // let itemSearched = e.target.value.toLowerCase();
-        // let results = this.props.items.filter(item => item.title.toLowerCase().search(itemSearched) !== -1 );
-        // console.log(results);
-        // this.setState({ results })
-        this.props.searchItem(e);
-    }
-
     render() {
-        console.log(this.props);
         const { results } = this.props;
-        // console.log(results);
         return (
             <>
                 <div className="search__container"> 
@@ -30,7 +20,6 @@ class Content extends Component {
                     <input 
                         type="text" 
                         onChange={ this.props.searchItem }
-                        // onChange={ this.searchingItem }
                         name="nameItem"
                         placeholder="¿Qué película deseas?"
                     />

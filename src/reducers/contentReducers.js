@@ -1,9 +1,8 @@
-import { SHOW_CONTENT, SEARCH_ITEM, SHOW_ITEM } from '../actions/types';
+import { SHOW_CONTENT, SEARCH_ITEM } from '../actions/types';
 
 const initialState = {
     items: [],
-    results: [],
-    // item: {}
+    results: []
 }
 
 export default function(state = initialState, action) {
@@ -18,14 +17,7 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 results: state.items.filter(result => result.title.toLowerCase().search(action.payload) !== -1)
-                // productos: state.productos.filter(producto => producto.id !== action.payload )
-                // let results = this.props.items.filter(item => item.title.toLowerCase().search(itemSearched) !== -1 );
             }
-        // case SHOW_ITEM:
-        //     return {
-        //         ...state,
-        //         item: action.payload
-        //     }
         default:
             return state;
     }
