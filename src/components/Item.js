@@ -6,24 +6,19 @@ import './styles/Item.css';
 
 class Item extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.showItem(this.props.match.params.id);
     }
 
     render() {
-        console.log(this.props);
-        const { genres } = this.props;
-        let date = this.props.date;
-        console.log(date);
-        // if(date.length > 10) {
-        //     date = date.slice(6,8)+'/'+date.slice(4,6)+'/'+date.slice(0,4);
-        //     this.setState({ date: date })
-        // } else {
-        //     this.setState({ date: date })
-        // }
-        console.log(genres)
+        // console.log(this.props);
+        // const { genres, backgroundImage } = this.props;
+        // let date = this.props.date;
+        // console.log(date);
+        // console.log(genres)
         return (
             <>
+                {/* <div style={{backgroundImage: `url(${this.props.backgroundImage})`}} className="cardItem"> */}
                 <div style={{backgroundImage: `url(${this.props.backgroundImage})`}} className="cardItem">
                     <h3 className="cardItem__title">{ this.props.title }</h3>
                     <div className="cardItem__content__container">
@@ -38,7 +33,7 @@ class Item extends Component {
                             <span className="black bolder">{ this.props.code }</span>
                             <div className="item__genre__container">
                             {
-                                genres.map((genre, index) => {
+                                this.props.genres.map((genre, index) => {
                                     return (
                                         <span key={index} className="item__genre">
                                             {genre.desc}
@@ -76,7 +71,7 @@ const mapStateToProps = state => ({
     duration: state.item.item.duration,
     language: state.item.item.language,
     code: state.item.item.code,
-    genres: state.item.item.genres,
+    genres: state.item.genres,
     largeDescription: state.item.item.largeDescription,
     rankingViews: state.item.item.rankingViews,
     rankingVotes: state.item.item.rankingVotes,

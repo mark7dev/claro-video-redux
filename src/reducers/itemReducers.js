@@ -1,7 +1,8 @@
 import { SHOW_ITEM } from '../actions/types';
 
 const initialState = {
-    item: {}
+    item: {},
+    genres: []
 }
 
 export default function(state = initialState, action) {
@@ -9,7 +10,8 @@ export default function(state = initialState, action) {
         case SHOW_ITEM:
             return {
                 ...state,
-                item: action.payload
+                item: action.payload,
+                genres: action.payload.genres
             }
         default:
             return state;

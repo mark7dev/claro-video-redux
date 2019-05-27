@@ -22,17 +22,7 @@ export const showItem = (id) => dispatch => {
 
         dispatch({
             type: SHOW_ITEM,
-            // payload: response.body.response.group.common
             payload: {
-                // item: response.body.response.group.common,
-                // date: response.body.response.group.common.date,
-                // ranking: response.body.response.group.common.ranking,
-                // media: response.body.response.group.common.extendedcommon.media,
-                // country: response.body.response.group.common.extendedcommon.media.countryoforigin.desc,
-                // language: response.body.response.group.common.extendedcommon.media.language.original.desc,
-                // genres: response.body.response.group.common.extendedcommon.genres.genre,
-                // code: response.body.response.group.common.extendedcommon.media.rating.code,
-
                 backgroundImage: response.body.response.group.common.image_background,
                 title: response.body.response.group.common.title,
                 imageLarge: response.body.response.group.common.image_large,
