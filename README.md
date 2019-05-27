@@ -20,3 +20,4 @@ You will also see any lint errors in the console.
 
 
 ### Deployment
+https://claro-video-app-redux.netlify.com/
